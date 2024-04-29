@@ -14649,7 +14649,7 @@ April 23, 2024</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"Eynav cleaned data.xlsx"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"De-identified PMAD data.xlsx"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'The full dataset consists of'</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">all_data</span><span class="p">),</span><span class="s1">'electronic health records.'</span><span class="p">)</span>
 </pre></div>
 
@@ -14690,7 +14690,7 @@ April 23, 2024</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predictor variables</span>
-<span class="n">var</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'MOM_PAT_ID'</span><span class="p">,</span><span class="s1">'MOM_AGE'</span><span class="p">,</span><span class="s1">'MOM_RACE'</span><span class="p">,</span><span class="s1">'ETHNIC_GROUP'</span><span class="p">,</span><span class="s1">'ZIP'</span><span class="p">,</span><span class="s1">'MARITAL_STATUS'</span><span class="p">,</span><span class="s1">'FINANCIAL_CLASS'</span><span class="p">,</span>
+<span class="n">var</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'MOM_PAT_ID'</span><span class="p">,</span><span class="s1">'MOM_AGE'</span><span class="p">,</span><span class="s1">'MOM_RACE'</span><span class="p">,</span><span class="s1">'ETHNIC_GROUP'</span><span class="p">,</span><span class="s1">'MARITAL_STATUS'</span><span class="p">,</span><span class="s1">'FINANCIAL_CLASS'</span><span class="p">,</span>
        <span class="s1">'LBW'</span><span class="p">,</span><span class="s1">'PTB'</span><span class="p">,</span>
        <span class="s1">'DELIVERY_METHOD'</span><span class="p">,</span><span class="s1">'NICU_ADMIT'</span><span class="p">,</span><span class="s1">'MFCU_ADMIT'</span><span class="p">,</span>
        <span class="s1">'PREE'</span><span class="p">,</span><span class="s1">'GDM'</span><span class="p">,</span><span class="s1">'GHTN'</span><span class="p">,</span>
@@ -14720,7 +14720,7 @@ April 23, 2024</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14752,7 +14752,7 @@ April 23, 2024</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Min Age:"</span><span class="p">,</span><span class="nb">min</span><span class="p">(</span><span class="n">demo</span><span class="p">[</span><span class="s1">'MOM_AGE'</span><span class="p">]))</span>
@@ -14808,7 +14808,7 @@ SD Age: 4.86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"------------RACE/ETHNIC COUNTS------------"</span><span class="p">)</span>
@@ -14839,13 +14839,13 @@ SD Age: 4.86
 <pre>------------RACE/ETHNIC COUNTS------------
 ETHNIC_GROUP                                        Hispanic  Non-Hispanic  \
 MOM_RACE                                                                     
-Asian or Native Hawaiian or Other Pacific Islander        21          2330   
+Asian or Native Hawaiian or Other Pacific Islander        21          2331   
 Black or African American                                 53          1346   
 Hispanic White                                          1842             0   
 Multiracial                                              140           420   
 Other                                                   1000          1113   
 Unknown                                                   33            40   
-White                                                      0         10855   
+White                                                      0         10856   
 
 ETHNIC_GROUP                                        Unknown  
 MOM_RACE                                                     
@@ -14869,7 +14869,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">perc_white</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="mi">10855</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">demo</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>
@@ -14909,7 +14909,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14928,7 +14928,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14947,7 +14947,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'The final dataset used for model training and evaluation consists of'</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">phq9</span><span class="p">),</span><span class="s1">'PHQ-9 records and'</span><span class="p">,</span>
@@ -14973,7 +14973,7 @@ White                                                    86
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The final dataset used for model training and evaluation consists of 11375 PHQ-9 records and 8658 EPDS records, with a total of 19428 unique patients.
+<pre>The final dataset used for model training and evaluation consists of 11377 PHQ-9 records and 8658 EPDS records, with a total of 19430 unique patients.
 </pre>
 </div>
 </div>
@@ -14987,7 +14987,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">phq9_ids</span> <span class="o">=</span> <span class="n">phq9</span><span class="p">[</span><span class="s1">'MOM_PAT_ID'</span><span class="p">]</span>
@@ -15031,7 +15031,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"------------PHQ9 PREV------------"</span><span class="p">)</span>
@@ -15067,7 +15067,7 @@ White                                                    86
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
@@ -15102,8 +15102,8 @@ White                                                    86
   <tbody>
     <tr>
       <th>Asian or Native Hawaiian or Other Pacific Islander</th>
-      <td>0.043728</td>
-      <td>1395</td>
+      <td>0.043696</td>
+      <td>1396</td>
     </tr>
     <tr>
       <th>Black or African American</th>
@@ -15132,8 +15132,8 @@ White                                                    86
     </tr>
     <tr>
       <th>White</th>
-      <td>0.036883</td>
-      <td>6507</td>
+      <td>0.036878</td>
+      <td>6508</td>
     </tr>
   </tbody>
 </table>
@@ -15151,7 +15151,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_white</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">phq9</span><span class="p">[</span><span class="s1">'PHQ9_risk2'</span><span class="p">][</span><span class="n">phq9</span><span class="p">[</span><span class="s1">'MOM_RACE'</span><span class="p">]</span><span class="o">==</span><span class="s1">'White'</span><span class="p">]))</span>
@@ -15186,7 +15186,7 @@ White                                                    86
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>NHW vs Rest : Two sided z-test: z = -4.2543, p value = 0.0000
+<pre>NHW vs Rest : Two sided z-test: z = -4.2537, p value = 0.0000
 </pre>
 </div>
 </div>
@@ -15200,7 +15200,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">([[</span><span class="n">x_non_white</span><span class="p">,</span> <span class="n">x_white</span><span class="p">],</span> <span class="p">[</span><span class="n">n_non_white</span><span class="o">-</span><span class="n">x_non_white</span><span class="p">,</span> <span class="n">n_white</span><span class="o">-</span><span class="n">x_white</span><span class="p">]])</span>
@@ -15227,7 +15227,7 @@ White                                                    86
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>PHQ9 OR: 1.4733105262954602
+<pre>PHQ9 OR: 1.4732259228681122
 </pre>
 </div>
 </div>
@@ -15235,13 +15235,13 @@ White                                                    86
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>ConfidenceInterval(low=1.226228392590683, high=1.7707460058921651)</pre>
+<pre>ConfidenceInterval(low=1.2261589701695317, high=1.7706428911684142)</pre>
 </div>
 
 </div>
@@ -15255,7 +15255,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"------------EPDS PREV------------"</span><span class="p">)</span>
@@ -15291,7 +15291,7 @@ White                                                    86
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
@@ -15375,7 +15375,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_white</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">epds</span><span class="p">[</span><span class="s1">'EPDS_risk2'</span><span class="p">][</span><span class="n">epds</span><span class="p">[</span><span class="s1">'MOM_RACE'</span><span class="p">]</span><span class="o">==</span><span class="s1">'White'</span><span class="p">]))</span>
@@ -15424,7 +15424,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">([[</span><span class="n">x_non_white</span><span class="p">,</span> <span class="n">x_white</span><span class="p">],</span> <span class="p">[</span><span class="n">n_non_white</span><span class="o">-</span><span class="n">x_non_white</span><span class="p">,</span> <span class="n">n_white</span><span class="o">-</span><span class="n">x_white</span><span class="p">]])</span>
@@ -15459,7 +15459,7 @@ White                                                    86
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -15479,7 +15479,7 @@ White                                                    86
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># save this file and output as html</span>
@@ -15507,7 +15507,7 @@ White                                                    86
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[NbConvertApp] Converting notebook Demographics.ipynb to html
-[NbConvertApp] Writing 608512 bytes to Demographics.html
+[NbConvertApp] Writing 615385 bytes to Demographics.html
 </pre>
 </div>
 </div>
@@ -15515,7 +15515,7 @@ White                                                    86
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
